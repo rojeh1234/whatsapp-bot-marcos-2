@@ -6,9 +6,9 @@ venom
     undefined,
     undefined,
     {
-      headless: true, // لازم تبقى true
-      useChrome: false, // خليه يستخدم Chromium من Puppeteer
-      browserArgs: ['--no-sandbox'],
+      headless: true, // مهم: لازم عشان Railway مفيهوش GUI
+      useChrome: false, // عشان يستخدم Chromium المدمج مع Puppeteer
+      browserArgs: ['--no-sandbox', '--disable-setuid-sandbox'], // لحل مشاكل الصلاحيات
     }
   )
   .then((client) => start(client))
