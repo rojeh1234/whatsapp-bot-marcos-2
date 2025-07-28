@@ -6,9 +6,9 @@ venom
     undefined,
     undefined,
     {
-      headless: false,
-      executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-      ignoreDefaultArgs: ['--disable-extensions'], // أضف السطر ده
+      headless: true, // لازم تبقى true
+      useChrome: false, // خليه يستخدم Chromium من Puppeteer
+      browserArgs: ['--no-sandbox'],
     }
   )
   .then((client) => start(client))
